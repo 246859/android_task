@@ -62,3 +62,11 @@ technology point: SharedPreferences storage.
 technology point: SQLite database, SQL.
 
 <img src="image/9.addressbook.png" width="300px" />
+
+### 10.phone concats
+
+technology point: Content Provider, Conent Resolver.
+
+<img src="image/10.concat1.png" width="300px" />
+
+<img src="image/10.concat2.png" width="300px" />
