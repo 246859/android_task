@@ -36,3 +36,7 @@ Here are some preview images as follows.
 ### 7.meituan menu
 
 <img src="image/7.meituanmenu.png" width="300px" />
+
+### 8.qq save
+
+<img src="image/8.saveqq.png" width="300px" />
