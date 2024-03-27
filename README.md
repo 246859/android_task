@@ -22,3 +22,7 @@ Here are some preview images as follows.
 ### 4.register
 
 <img src="image/4.register.png" width="300px" />
+
+### 5.shopping cart
+
+<img src="image/5.shoppingcart.png" width="300px" />
