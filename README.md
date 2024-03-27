@@ -26,3 +26,9 @@ Here are some preview images as follows.
 ### 5.shopping cart
 
 <img src="image/5.shoppingcart.png" width="300px" />
+
+### 6.pick peach
+
+<img src="image/6.pickpeach_1.png" width="300px" />
+
+<img src="image/6.pickpeach_2.png" width="300px" />
