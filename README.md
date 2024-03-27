@@ -78,3 +78,9 @@ technology point: Content Provider, Conent Resolver.
 technology point: Broadcast Receiver, Broadcast Filter.
 
 <img src="image/11.countduck.png" width="300px" />
+
+### 12.netease player
+
+technology point: Service.
+
+<img src="image/12.neteaseplayer.png" width="300px" />
