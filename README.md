@@ -70,3 +70,11 @@ technology point: Content Provider, Conent Resolver.
 <img src="image/10.concat1.png" width="300px" />
 
 <img src="image/10.concat2.png" width="300px" />
+
+
+
+### 11.count ducks
+
+technology point: Broadcast Receiver, Broadcast Filter.
+
+<img src="image/11.countduck.png" width="300px" />
