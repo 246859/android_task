@@ -84,3 +84,9 @@ technology point: Broadcast Receiver, Broadcast Filter.
 technology point: Service.
 
 <img src="image/12.neteaseplayer.png" width="300px" />
+
+### 13.pingduoduo
+
+technology point: okhttp sync request,
+
+<img src="image/13.pingduoduo.png" width="300px" />
