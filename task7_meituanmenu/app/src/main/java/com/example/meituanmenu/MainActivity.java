@@ -2,6 +2,7 @@ package com.example.meituanmenu;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -89,10 +90,12 @@ public class MainActivity extends AppCompatActivity {
         tv_recommend.setOnClickListener(v -> {
             //调用switchData()方法填充Rightfragment中的数据
             switchData(map.get("1"));
+            Log.i("recommend", "美团推荐");
             tv_recommend.setBackgroundColor(Color.WHITE);
             tv_must_buy.setBackgroundResource(R.color.gray);
         });
         tv_must_buy.setOnClickListener(v -> {
+            Log.i("must buy", "美团进店必买");
             switchData(map.get("2"));
             tv_must_buy.setBackgroundColor(Color.WHITE);
             tv_recommend.setBackgroundResource(R.color.gray);

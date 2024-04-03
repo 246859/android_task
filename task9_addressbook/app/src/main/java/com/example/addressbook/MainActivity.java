@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             values.put("phone", phone);
             db.insert("information", null, values);
             Toast.makeText(this, "信息已添加", Toast.LENGTH_SHORT).show();
+            Log.i("add", "信息已添加 name=" + name + ",phone=" + phone);
             db.close();
         } else if (v.getId() == R.id.btn_query) {
             db = sqlHelper.getReadableDatabase();
@@ -101,10 +103,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "没有数据", Toast.LENGTH_SHORT).show();
             } else {
                 cursor.moveToFirst();
+                Log.i("query", "Name :  " + cursor.getString(1) +
+                        "  ；Tel :  " + cursor.getString(2));
                 mTvShow.setText("Name :  " + cursor.getString(1) +
                         "  ；Tel :  " + cursor.getString(2));
             }
             while (cursor.moveToNext()) {
+                Log.i("query", "Name :  " + cursor.getString(1) +
+                        "  ；Tel :  " + cursor.getString(2));
                 mTvShow.append("\n" + "Name :  " + cursor.getString(1) +
                         "  ；Tel :  " + cursor.getString(2));
             }
@@ -117,11 +123,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             db.update("information", values, "name=?",
                     new String[]{mEtName.getText().toString()}); // 更新并得到行数
             Toast.makeText(this, "信息已修改", Toast.LENGTH_SHORT).show();
+            Log.i("update", "信息已修改: " + phone);
             db.close();
         } else if (v.getId() == R.id.btn_delete) {
             db = sqlHelper.getWritableDatabase();
             db.delete("information", null, null);
             Toast.makeText(this, "信息已删除", Toast.LENGTH_SHORT).show();
+            Log.i("delete", "信息已删除");
             mTvShow.setText("");
             db.close();
         }

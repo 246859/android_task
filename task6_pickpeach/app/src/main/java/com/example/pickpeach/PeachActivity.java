@@ -2,6 +2,7 @@ package com.example.pickpeach;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +41,7 @@ public class PeachActivity extends AppCompatActivity implements View.OnClickList
         count++; //桃子个数加1
         // 设为不可见，表示已经摘除
         btn.setVisibility(View.INVISIBLE);
+        Log.i("pickpeach","摘到" + count + "个桃子");
         Toast.makeText(PeachActivity.this, "摘到" + count + "个桃子",
                 Toast.LENGTH_SHORT).show();
     }

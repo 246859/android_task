@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setData() {
         List<ContactInfo> contactInfos = getContacts();
+        contactInfos.forEach((contactInfo) -> {
+            Log.i("", "通讯录: "+contactInfo.getContactName() + "," + contactInfo.getPhoneNumber());
+        });
         adapter = new ContactAdapter(this, contactInfos);
         rv_contact.setAdapter(adapter);
     }
@@ -97,8 +101,10 @@ public class MainActivity extends AppCompatActivity {
                         && grantResults[i] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "读取通讯录权限申请成功",
                             Toast.LENGTH_SHORT).show();
+                    Log.i("MainActivity", "读取通讯录权限申请成功");
                     setData();//后续创建该方法
                 } else {
+                    Log.i("MainActivity", "读取通讯录权限申请失败");
                     Toast.makeText(this, "读取通讯录权限申请失败",
                             Toast.LENGTH_SHORT).show();
                 }
