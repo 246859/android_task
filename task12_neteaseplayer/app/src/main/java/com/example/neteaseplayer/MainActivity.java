@@ -128,18 +128,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_play) {
+            Log.i("netease", "播放");
             musicControl.play();           //播放音乐
             animator.start();               //播放动画
         } else if (v.getId() == R.id.btn_pause) {
             musicControl.pausePlay();     //暂停播放音乐
             animator.pause();              //暂停播放动画
+            Log.i("netease", "暂停");
         } else if (v.getId() == R.id.btn_continue_play) {
             musicControl.continuePlay(); //继续播放音乐
             animator.start();              //播放动画
+            Log.i("netease", "继续");
         } else if (v.getId() == R.id.btn_exit) {
             unbind(isUnbind);               //解绑服务绑定
             isUnbind = true;                //完成解绑服务
             finish();                         //关闭音乐播放界面
+            Log.i("netease", "关闭");
         }
     }
 

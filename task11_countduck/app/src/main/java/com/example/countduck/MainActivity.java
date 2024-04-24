@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 iv_horn.setClickable(false);  //设置喇叭图片为不可点击的状态
                 Intent intent = new Intent();
                 intent.setAction("Count_Ducks");      // 定义广播的事件类型
+                Log.i("click", "广播发送");
                 sendOrderedBroadcast(intent, null);  // 发送有序广播
             }
         });

@@ -93,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
                         String vlResult = (String) msg.obj;
                         // 解析获取的JSON数据
                         List<GoodsInfo> goodsInfos = getGoodsList(vlResult);
+                        goodsInfos.forEach((goodsInfo) -> {
+                            String desc = goodsInfo.getId() + " 名称:" + goodsInfo.getGoodsName() + " 数量:" + goodsInfo.getCount();
+                            Log.i("pingduoduo", desc);
+                        });
                         adapter.setData(goodsInfos);
                     }
                     break;

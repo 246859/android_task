@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private void setData() {
         List<ContactInfo> contactInfos = getContacts();
         contactInfos.forEach((contactInfo) -> {
-            Log.i("", "通讯录: "+contactInfo.getContactName() + "," + contactInfo.getPhoneNumber());
+            Log.i("", "通讯录: " + contactInfo.getContactName() + "," + contactInfo.getPhoneNumber());
         });
         adapter = new ContactAdapter(this, contactInfos);
         rv_contact.setAdapter(adapter);
@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         cursor.close();
+        contactInfos.forEach((contactInfo) -> {
+            Log.i("联系人", contactInfo.getContactName() + ":" + contactInfo.getPhoneNumber());
+        });
         return contactInfos;
     }
 
